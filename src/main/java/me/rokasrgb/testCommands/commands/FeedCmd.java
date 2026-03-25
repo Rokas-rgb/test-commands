@@ -14,15 +14,20 @@ public class FeedCmd implements CommandExecutor {
         if (!(sender instanceof Player)) {
             sender.sendMessage(ChatColor.RED + "Only players can execute this command!");
         }
+        Player player = (Player) sender;
 
         if (command.getName().equalsIgnoreCase("feed")) {
-            Player player = (Player) sender;
+
+            if(!player.hasPermission("permissions.feed")) {
+                player.sendMessage(ChatColor.RED + "You do not have permissions to execute this command!");
+                return true;
+            }
 
             player.setFoodLevel(20);
             player.sendMessage(ChatColor.GREEN + "You have now eaten!");
 
+            return true;
         }
-
         return true;
     }
 }

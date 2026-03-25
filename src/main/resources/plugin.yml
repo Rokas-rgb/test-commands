@@ -16,3 +16,17 @@ commands:
   fly:
     description: Allows the player to fly
     usage: /fly
+
+permissions:
+  permissions.fly:
+    description: To get it you have to kill the Ender dragon
+    default: false
+
+  permissions.feed:
+    description: To get it you have to get "A balanced diet"
+    default: false
+
+  permissions.heal:
+    description: To get it you have to kill the Wither
+
+depend: [LuckPerms]

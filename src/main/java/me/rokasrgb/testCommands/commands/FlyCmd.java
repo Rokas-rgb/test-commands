@@ -15,17 +15,21 @@ public class FlyCmd implements CommandExecutor {
             sender.sendMessage(ChatColor.RED + "Only players can execute this command!");
         }
 
-
+        Player player = (Player) sender;
 
         if (command.getName().equalsIgnoreCase("fly")) {
-            Player player = (Player) sender;
-            if(player.getAllowFlight()) {
-                player.setAllowFlight(false);
-                player.sendMessage(ChatColor.RED + "Flying disabled!");
-            }   else {
-                player.setAllowFlight(true);
-                player.sendMessage(ChatColor.GREEN + "Flying enabled!");
+            if(!player.hasPermission("fly")) {
+                player.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
             }
+
+                if(player.getAllowFlight()) {
+                    player.setAllowFlight(false);
+                    player.sendMessage(ChatColor.RED + "Flying disabled!");
+                }else {
+                    player.setAllowFlight(true);
+                    player.sendMessage(ChatColor.GREEN + "Flying enabled!");
+            }
+             return true;
         }
         return true;
     }

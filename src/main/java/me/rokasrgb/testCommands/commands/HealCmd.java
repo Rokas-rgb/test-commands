@@ -17,9 +17,16 @@ public class HealCmd implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        player.setHealth(20);
-        player.sendMessage(ChatColor.GREEN + "You are now at full health!");
+        if(command.getName().equalsIgnoreCase("heal")) {
 
+            if(!player.hasPermission("permissions.heal")) {
+                player.sendMessage(ChatColor.RED + "You do not have permissions to execute this command");
+            }
+
+            player.setHealth(20);
+
+            return true;
+        }
         return true;
     }
 }
