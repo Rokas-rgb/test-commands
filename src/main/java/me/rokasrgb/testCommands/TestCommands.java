@@ -6,7 +6,7 @@ public final class TestCommands extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        this.getCommand("heal").setExecutor(new TestCommands());
 
     }
 

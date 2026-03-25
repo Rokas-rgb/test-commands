@@ -2,3 +2,9 @@ name: TestCommands
 version: '1.0-SNAPSHOT'
 main: me.rokasrgb.testCommands.TestCommands
 api-version: '1.21'
+
+commands:
+  heal:
+    description: Heals the player to max health
+    usage: /heal
+    permission: 
