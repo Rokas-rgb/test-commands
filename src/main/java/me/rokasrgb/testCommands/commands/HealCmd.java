@@ -20,6 +20,6 @@ public class HealCmd implements CommandExecutor {
         player.setHealth(20);
         player.sendMessage(ChatColor.GREEN + "You are now at full health!");
 
-        return false;
+        return true;
     }
 }

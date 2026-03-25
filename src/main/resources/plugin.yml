@@ -7,4 +7,12 @@ commands:
   heal:
     description: Heals the player to max health
     usage: /heal
-    permission: 
+    permission:
+
+  feed:
+    description: Feed the player
+    usage: /feed
+
+  fly:
+    description: Allows the player to fly
+    usage: /fly
