@@ -1,0 +1,4 @@
+name: TestCommands
+version: '1.0-SNAPSHOT'
+main: me.rokasrgb.testCommands.TestCommands
+api-version: '1.21'
