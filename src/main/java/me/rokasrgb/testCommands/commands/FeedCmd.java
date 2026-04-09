@@ -37,7 +37,7 @@ public class FeedCmd implements CommandExecutor {
 
                 if (feedCooldown.onCooldown(player, 3600)) {
                     player.sendMessage(ChatColor.RED + "You are on cooldown!: " + feedCooldown.getRemaining(player, 3600));
-                    return true;
+                    return false;
                 }
 
                 player.setFoodLevel(20);
