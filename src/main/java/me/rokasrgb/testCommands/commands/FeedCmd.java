@@ -55,7 +55,7 @@ public class FeedCmd implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Player not found!");
                 } else{
                     target.setFoodLevel(20);
-                    target.sendMessage(ChatColor.GREEN + "You have been fed by" + player + "!");
+                    target.sendMessage(ChatColor.GREEN + "You have been fed by" + player.getDisplayName() + "!");
                 }
             }
         }
